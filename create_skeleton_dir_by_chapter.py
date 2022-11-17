@@ -29,7 +29,7 @@ def create_test_cases_txt(inputs_dict, new_dir):
     input_number_of_qns = int(inputs_dict["input_number_of_qns"])
     filename = 'test_cases.txt'
     full_file_path = os.path.join(new_dir, filename)
-    with open(full_file_path, 'ws') as f:
+    with open(full_file_path, 'w') as f:
         for i in range(input_number_of_qns):
             f.write("====\n")
             f.write(f"{inputs_dict['input_chapter_no']}.{i+1}\n")
@@ -42,7 +42,22 @@ def create_test_cases_txt(inputs_dict, new_dir):
 
 
 # Create individual python files for each question.
-def create_soln_files(inputs_dict, new_dir, py_file_to_copy):
+def create_soln_files(inputs_dict, new_dir, py_filename_to_copy):
+    no_of_files_to_create = int(inputs_dict['input_number_of_qns'])
+
+    # Source
+    parent_dir = os.getcwd()
+    full_path_of_py = os.path.join(parent_dir, py_filename_to_copy)
+
+    # Target
+    for i in range(no_of_files_to_create):
+        new_filename = f"{inputs_dict['input_chapter_no']}.{i+1}.py"
+        full_path_of_new_py = os.path.join(new_dir, new_filename)
+        if not os.path.exists(full_path_of_new_py):
+            shutil.copy(full_path_of_py, full_path_of_new_py)
+
+
+
 
 
 
@@ -50,7 +65,6 @@ if __name__ == "__main__":
     inputs_dict = inputs_from_user()
     new_folder = create_new_folder(inputs_dict)
     create_test_cases_txt(inputs_dict, new_folder)
-    create_soln_files(inputs_dict, new_folder, py_file_to_copy)
-    print(new_folder)
+    create_soln_files(inputs_dict, new_folder, "sample_soln_file.py")
 
 
