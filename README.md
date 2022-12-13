@@ -13,7 +13,7 @@ The skeleton directory would include the following:
 6. Upon completion, test each question by running `python <question number>.py` in a terminal.
 
 
-### Notes to self regarding testing
+# Notes to self regarding testing
 Possible test cases (not exhaustive)  
 - Case #1: Variations on the scenario in the question
 - Case #2: Inputs not as described
