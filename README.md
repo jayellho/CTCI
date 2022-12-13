@@ -1,3 +1,4 @@
+# Preface
 This code repository is in <b>Python</b> and is intended to assist readers of 'Cracking the Coding Interview' (by Gayle Laakmann) by creating a <b>skeleton directory</b> (by chapter) for their practice, as well as to provide a <b>test harness</b> for easy checking of their solutions. It will also include <b>my code</b> as I follow the book chapter by chapter.
 
 The skeleton directory would include the following:  
@@ -12,9 +13,18 @@ The skeleton directory would include the following:
 5. Edit the .txt to include your test cases as necessary.
 6. Upon completion, test each question by running `python <question number>.py` in a terminal.
 
+# Notes on specific files in this repository
+### code_playground.ipynb
+For users to try out their code before putting into the different .py files for actual testing.
+
+### create_skeleton_dir_by_chapter.py
+This includes code to create the skeleton directory. Makes use of `sample_soln_file.py` below.
+
+### sample_soln_file.py
+This is the skeleton code for each .py file that is created using `create_skeleton_dir_by_chapter.py`.
 
 # Notes to self regarding testing
-Possible test cases (not exhaustive)  
+<b>Possible test cases (not exhaustive):</b>  
 - Case #1: Variations on the scenario in the question
 - Case #2: Inputs not as described
 - Case #3: Duplicates
