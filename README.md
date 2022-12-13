@@ -6,7 +6,8 @@ The skeleton directory would include the following:
 
 # How to use
 1. Ensure you have Python 3 installed.
-2. Open a terminal and run 'python create_skeleton_dir_by_chapter'.
+2. Open a terminal and run `python create_skeleton_dir_by_chapter`.
 3. Follow the prompts from the code to create your skeleton directory by chapter.
 4. Edit the .py to include your code for each question.
 5. Include relevant test cases as necessary in the .txt.
+6. Upon completion, test each question by running `python <question number>.py` in a terminal.
