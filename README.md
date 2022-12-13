@@ -14,9 +14,8 @@ The skeleton directory would include the following:
 
 
 ### Notes to self regarding testing
-Possible test cases (not exhaustive)
+Possible test cases (not exhaustive)  
 - Case #1: Variations on the scenario in the question
 - Case #2: Inputs not as described
 - Case #3: Duplicates
 - Case #4: Performance
-- 
