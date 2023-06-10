@@ -16,7 +16,6 @@ def check_against_test_cases(path_to_test_cases_file):
     passed_cases_per_qn = 0
     total_cases_per_qn = 0
     current_py_wo_py = os.path.basename(__file__)[:-3]
-    print("current_py_wo_py = {}".format(current_py_wo_py))
     with open(path_to_test_cases_file) as f:
             file_content = f.readlines()
             for indx, line in enumerate(file_content):
@@ -50,6 +49,8 @@ def check_against_test_cases(path_to_test_cases_file):
                         passed_cases_per_qn += 1
                     else:
                         print(f"Test case {test_case_no} failed! Please amend your code.")
+                        print(f"Your output is: {actual_output}")
+                        print(f"The actual output should be: {cleaned_test_case_expected_output}")
             
             return [passed_cases_per_qn, total_cases_per_qn, current_py_wo_py]
 
